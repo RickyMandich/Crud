@@ -17,4 +17,6 @@ public class RestController{
     public String index(@PathVariable int p1, @RequestParam(required = false) int p2) {
         return p1+"+"+p2+"="+(p1+p2);
     }
+
+
 }
