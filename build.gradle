@@ -11,6 +11,7 @@ repositories {
 
 dependencies {
     implementation group: 'org.springframework.boot', name: 'spring-boot', version: '2.5.5'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.5.5'
 }
 
 test {
