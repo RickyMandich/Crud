@@ -1,7 +1,7 @@
 # Martedì 2025 04 08
 ## Argomenti trattati
 - rest api
-  - un'architettura per la realizzazione di servizi web
+  - un'architettura per la realizzazione di servizi web, noi useremo queste
 - soap api
   - un'architettura per la realizzazione di servizi web, si differenzia dalle rest api per la fiscalità nelle richieste
 - web service

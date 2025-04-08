@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="it.fermi.Main" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="it.fermi.Main" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
