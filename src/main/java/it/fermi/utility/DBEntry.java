@@ -1,4 +1,4 @@
-package it.fermi.utulity;
+package it.fermi.utility;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

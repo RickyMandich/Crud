@@ -1,11 +1,12 @@
 package it.fermi.controller.crud;
 
-import it.fermi.utulity.DBEntry;
+import it.fermi.utility.DBEntry;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,10 +22,14 @@ public class FindCluster{
         }
         try (java.sql.Statement stmt = conn.createStatement()) {
             clusterCode = (clusterCode == null) ? "" : clusterCode;
+            if(clusterCode.contains("'")){
+                ret.add(new ArrayList<String>(List.of("bad input")));
+                return ret;
+            }
             clusterCode = "%" + clusterCode + "%";
             String select = "select * from spool_cluster where cluster_code like '" + clusterCode + "';";
             ret.add(new ArrayList<String>(List.of(select)));
-            try (java.sql.ResultSet rs = stmt.executeQuery(select)) {
+            try (ResultSet rs = stmt.executeQuery(select)) {
                 while (rs.next()){
                     List<String> res = new ArrayList<String>();
                     for(int i = 0; i < rs.getMetaData().getColumnCount(); i++) {
