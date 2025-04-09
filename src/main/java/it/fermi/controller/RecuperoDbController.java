@@ -16,8 +16,11 @@ public class RecuperoDbController{
                 String select = "select * from spool_cluster;";
                 try (ResultSet rs = stmt.executeQuery(select)) {
                     while (rs.next()) {
-                        String name = rs.getString("description");
-                        body.add(name);
+                        List<String> attributes = new java.util.ArrayList<String>();
+                        for(int i = 0; i < rs.getMetaData().getColumnCount(); i++) {
+                            attributes.add(rs.getString(i+1));
+                        }
+                        body.add(attributes.toString());
                     }
                 }
             }
