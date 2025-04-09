@@ -27,6 +27,6 @@ public class RecuperoDbController{
         }catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        return body.toString();
+        return "<title>spool_cluster</title>" + body;
     }
 }
