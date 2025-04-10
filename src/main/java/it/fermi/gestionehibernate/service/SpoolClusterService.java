@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service(value = "servizionuovo")
-public class SpoolCLusterService {
+public class SpoolClusterService {
     @Autowired
     private SpoolClusterRepository spoolClusterRepository;
 
