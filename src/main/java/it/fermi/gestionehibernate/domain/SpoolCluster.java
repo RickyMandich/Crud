@@ -2,6 +2,17 @@ package it.fermi.gestionehibernate.domain;
 
 import javax.persistence.*;
 
+
+/**
+ * Entity class representing a spool cluster.
+ * This class is mapped to the "spool_cluster" table in the database.
+ * @params clusterId:Long
+ * @params clusterCode:String
+ * @params description:String
+ * @params state:String
+ * @author Riccardo Mandich
+ * @version 1.0
+ */
 @Entity(name = "spool_cluster")
 public class SpoolCluster {
     @Id
