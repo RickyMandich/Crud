@@ -17,7 +17,7 @@ dependencies {
     implementation group: 'com.mysql', name: 'mysql-connector-j', version: '8.0.31'
     runtimeOnly 'com.mysql:mysql-connector-j'
     // hibernate
-    implementation("org.hibernate:hibernate-core:7.0.0.Beta5")
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '7.0.0.Beta5', ext: 'pom'
 }
 
 test {
