@@ -26,6 +26,12 @@ public class DeleteCluster {
         } catch (java.sql.SQLException e) {
             e.printStackTrace();
             return List.of("impossibile cancellare i dati");
+        }finally {
+            try {
+                DBEntry.getConnection().close();
+            } catch (java.sql.SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

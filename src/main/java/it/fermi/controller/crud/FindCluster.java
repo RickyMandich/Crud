@@ -41,6 +41,12 @@ public class FindCluster{
         } catch (java.sql.SQLException e) {
             ret.add(new ArrayList<>(List.of("impossibile recuperare i dati")));
             e.printStackTrace();
+        }finally {
+            try {
+                DBEntry.getConnection().close();
+            } catch (java.sql.SQLException e) {
+                e.printStackTrace();
+            }
         }
         return ret;
     }
