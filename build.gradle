@@ -10,10 +10,14 @@ repositories {
 }
 
 dependencies {
+    // spring
     implementation group: 'org.springframework.boot', name: 'spring-boot', version: '2.5.5'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.5.5'
+    // mysql
     implementation group: 'com.mysql', name: 'mysql-connector-j', version: '8.0.31'
     runtimeOnly 'com.mysql:mysql-connector-j'
+    // hibernate
+    implementation('org.hibernate:hibernate-core:5.6.1.Final')
 }
 
 test {
